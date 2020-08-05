@@ -1,0 +1,43 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Orbitron:wght@400;500;600;700&family=Roboto:wght@100;300;400;500&display=swap');
+@import "~bootstrap/scss/bootstrap";
+
+$font-roboto: 'Roboto', sans-serif;
+$font-orbitron: 'Orbitron', sans-serif;
+$font-lato: 'Lato', sans-serif;
+
+$color-body: rgb(229, 229, 229);
+$color-white: rgb(255, 255, 255);
+$color-site: rgb(3, 148, 148);
+$color-h: rgb(150, 150, 150);
+$color-p: rgb(120, 120, 120);
+
+body {
+  font: 100% $font-lato !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-h;
+  font-family: $font-orbitron;
+  text-transform: lowercase;
+}
+
+p, small {
+  color: $color-p;
+}
+
+// smart sticky header 
+header{
+    position: sticky;
+    top: -1px;
+    transition: .2s ease-out;
+    z-index: 1000;
+    
+    &.isSticky{
+      &::after{
+        // content:" Afunja Music Publishing Ltd";
+        color: #fff;
+        padding: 20px;
+      }
+    }
+  }
