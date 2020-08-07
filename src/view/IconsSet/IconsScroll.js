@@ -12,7 +12,7 @@ import IconsSection002 from './IconsSection002.js';
 import IconsSection003 from './IconsSection003.js';
 
 const pageColor = {
-    pColor: '#999',
+  pColor: '#999',
 }
 const useStyles = makeStyles({
   table: {
@@ -39,25 +39,29 @@ export default function IconsScroll() {
   const classes = useStyles();
 
   return (
-    <TableContainer>
-      <Table className={classes.table} aria-label="icons table">
-        <TableHead>
-          <TableRow>
-            <TableCell className={classes.tableCell}>ICONS 001</TableCell>
-            <TableCell className={classes.tableCell}>Myth of Being</TableCell>
-            <TableCell className={classes.tableCell}>ICONS 002</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.num}>
-              <TableCell className={classes.tableCellTd}>{row.icon001}</TableCell>
-              <TableCell className={classes.tableCellTd}>{row.icon003}</TableCell>
-              <TableCell className={classes.tableCellTd}>{row.icon002}</TableCell>
+    <div>
+      <h3>Afunja icons</h3>
+      <small>Digital Arts animated gif by A.Lipede. Please click on icons to view:</small>
+      <TableContainer>
+        <Table className={classes.table} aria-label="icons table">
+          <TableHead>
+            <TableRow>
+              <TableCell className={classes.tableCell}>ICONS 001</TableCell>
+              <TableCell className={classes.tableCell}>Myth of Being</TableCell>
+              <TableCell className={classes.tableCell}>ICONS 002</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow key={row.num}>
+                <TableCell className={classes.tableCellTd}>{row.icon001}</TableCell>
+                <TableCell className={classes.tableCellTd}>{row.icon003}</TableCell>
+                <TableCell className={classes.tableCellTd}>{row.icon002}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
   );
 }

@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     }
 });
 
-// SMEDIA Props:
+// SoundCloud Props:
 const soundCloudProps = {
     IronyOfPeace: {
         url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/70735660&color=%23ff5500&inverse=false&auto_play=false&show_user=true",
@@ -44,6 +44,8 @@ export default function SoundCloudList() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
+            <hr />
+            <h3>Afunja - Studio Demos</h3>
             {Object.keys(soundCloudProps).map(key => (
                 <div key={soundCloudProps[key].numKey}>
                     <Iframe url={soundCloudProps[key].url}

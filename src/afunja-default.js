@@ -6,17 +6,25 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import AppBar from '@material-ui/core/AppBar'
-import Typography from '@material-ui/core/Typography'
 
 import AfunjaSvg from './components/LogoSvgs/AfunjaSvg'
-import NavBar from './components/NavBar/NavBar'
+// import NavBarLinks from './components/NavBar/NavBar'
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
 import ParallaxHome from './components/Parallax/ParallaxHome'
 import FollowLinks from './components/Follow/FollowLinks'
 import Stores from './view/Stores/Stores'
-import SoundCloudPlayer from './components/SoundCloud/SoundCloudPlayer'
+import SoundCloudList from './components/SoundCloud/SoundCloudList'
 import ParallaxAbout from './components/Parallax/ParallaxAbout'
+import AboutAfunja from './view/About/AboutAfunja'
 import AfunjaLogoSvg from './components/LogoSvgs/AfunjaLogoSvg'
+import JojonaIssina from './components/LogoSvgs/JojonaIssinaSvg'
+import AfunjaSvgLight from './components/LogoSvgs/AfunjaSvgLight'
+import Footer from './components/Footer/Footer'
+import SwipeDrawer from './components/SwipeDrawer/SwipeDrawer'
 
+import IconsScroll from './view/IconsSet/IconsScroll'
+
+import { FaShoppingCart } from "react-icons/fa"
 import './assets/scss/index.scss'
 
 const useStyles = makeStyles((theme) => ({
@@ -29,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const { createRef, useState, useEffect } = React
-
 
 function Header({ children, sticky = false, className, ...rest }) {
   const [isSticky, setIsSticky] = useState(false)
@@ -58,11 +65,46 @@ function Header({ children, sticky = false, className, ...rest }) {
   )
 }
 
+
+
+
+// NavBar
+const NavBarLinks = (props) => {
+  const [collapsed, setCollapsed] = useState(true);
+
+  const toggleNavbar = () => setCollapsed(!collapsed);
+
+  return (
+    <div>
+      <Navbar color="faded" dark value={location.pathname}>
+        <NavbarBrand href="/" className="mr-auto">african funk &amp; jazz</NavbarBrand>
+        <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+        <Collapse isOpen={!collapsed} navbar>
+          <Nav navbar>
+            <NavItem>
+              <NavLink href="/">About</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Icons</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+
+      </Navbar>
+    </div>
+  );
+}
+
+
 export default function Afunja() {
   const classes = useStyles();
   return (
     <BrowserRouter>
       <div className={classes.root}>
+      <Route
+                    path="/"
+                    render={({ location }) => (
+        
         <Fragment>
           <CssBaseline />
           <Container maxWidth="md">
@@ -72,53 +114,73 @@ export default function Afunja() {
 
             <Header>
               <AppBar position="sticky">
-                  <NavBar />
+                <NavBarLinks />
               </AppBar>
             </Header>
 
-            
-
             <Grid container spacing={3}>
-                <Grid item xs={12} style={{backgroundColor: "#fff"}}>
-                    <ParallaxHome />
-                </Grid>
+              <Grid item xs={12}>
+                <ParallaxHome />
+              </Grid>
 
-                <Grid item xs={12} style={{backgroundColor: "#fff"}}>
-                    <FollowLinks />
-                    <hr />
-                {/* </Grid>
+              <Grid item xs={12} sm={8}>
+                <FollowLinks />
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <SwipeDrawer />
+              </Grid>
 
-                <Grid item xs={12} sm={8} style={{height: "auto", backgroundColor: "#fff"}}> */}
-                    {/* STORE */}
-                    <h3>Afunja - Single Releases</h3>
-                    <Stores />
+              <hr />
 
-                    <hr />
-                    <h3>Afunja - Studio Demos</h3>
-                    <SoundCloudPlayer />
+              <Grid item xs={12} sm={8}>
+                {/* STORE */}
+                <h3>Afunja - Single Releases <FaShoppingCart /></h3>
+                <p>Available for Download and Streaming.</p>
+                <Stores />
+                {/* SOUNDCLOUD */}
+                <hr />
+                <h3>Afunja - Studio Demos</h3>
+                <SoundCloudList />
+              </Grid>
 
-                    
-                </Grid>
-                {/* <Grid item xs={12} sm={4} style={{height: "20vh", backgroundColor: "#fff"}}>
-                    <h4>Contact</h4>
-                    <hr />
-                    <h4>Subscribe</h4>
-                    <small>Mailchimp mailing list.</small>
-                </Grid> */}
+              <Grid item xs={12} sm={4}>
+                {/* SUBSCRIBE */}
+                <h4>Subscribe</h4>
+                <small>Mailchimp mailing list.</small>
+                <hr />
+                {/* CONTACT */}
+                <h4>Contact</h4>
+                <small>Please contact Afunja using the email below:</small>
+              </Grid>
+              
+              <Grid item xs={12}>
+                {/* ABOUT */}
+                <hr />
+                <ParallaxAbout />
+                <h3>About Afunja</h3>
+                <p>Afunja Music Publishing Ltd <sup>Ⓟ</sup> member of ASCAP, Tunecore, Amuse, Songtrust and PPL.</p>
+                <AboutAfunja />
 
-                <Grid item xs={12} style={{backgroundColor: "#fff"}}>
-                    {/* ABOUT */}
-                    <ParallaxAbout />
-                    <h3>About Afunja</h3>
-                </Grid>
+                <hr />
+                {/* ICONS */}
+                <h3>Afunja icons</h3>
+                <small>Digital Arts animated gif by A.Lipede. Please click on icons to view:</small>
+                <IconsScroll />
+              </Grid>
             </Grid>
 
             <section>
               <AfunjaLogoSvg />
+              <JojonaIssina />
+              <AfunjaSvgLight />
+              <Footer />
             </section>
-            
+
           </Container>
         </Fragment>
+
+)}
+/>
 
       </div>
     </BrowserRouter>
