@@ -8,7 +8,8 @@ import Grid from '@material-ui/core/Grid'
 import AppBar from '@material-ui/core/AppBar'
 
 import AfunjaSvg from './components/LogoSvgs/AfunjaSvg'
-import NavBar from './components/NavBar/NavBar'
+// import NavBarLinks from './components/NavBar/NavBar'
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
 import ParallaxHome from './components/Parallax/ParallaxHome'
 import FollowLinks from './components/Follow/FollowLinks'
 import Stores from './view/Stores/Stores'
@@ -64,11 +65,46 @@ function Header({ children, sticky = false, className, ...rest }) {
   )
 }
 
+
+
+
+// NavBar
+const NavBarLinks = (props) => {
+  const [collapsed, setCollapsed] = useState(true);
+
+  const toggleNavbar = () => setCollapsed(!collapsed);
+
+  return (
+    <div>
+      <Navbar color="faded" dark value={location.pathname}>
+        <NavbarBrand href="/" className="mr-auto">african funk &amp; jazz</NavbarBrand>
+        <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+        <Collapse isOpen={!collapsed} navbar>
+          <Nav navbar>
+            <NavItem>
+              <NavLink href="/">About</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Icons</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+
+      </Navbar>
+    </div>
+  );
+}
+
+
 export default function Afunja() {
   const classes = useStyles();
   return (
     <BrowserRouter>
       <div className={classes.root}>
+      <Route
+                    path="/"
+                    render={({ location }) => (
+        
         <Fragment>
           <CssBaseline />
           <Container maxWidth="md">
@@ -78,7 +114,7 @@ export default function Afunja() {
 
             <Header>
               <AppBar position="sticky">
-                <NavBar />
+                <NavBarLinks />
               </AppBar>
             </Header>
 
@@ -142,6 +178,9 @@ export default function Afunja() {
 
           </Container>
         </Fragment>
+
+)}
+/>
 
       </div>
     </BrowserRouter>

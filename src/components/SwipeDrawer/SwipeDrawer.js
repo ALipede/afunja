@@ -1,17 +1,17 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import React from 'react'
+import clsx from 'clsx'
+import { makeStyles } from '@material-ui/core/styles'
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 
-import Tab from '@material-ui/core/Tab';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+import Tab from '@material-ui/core/Tab'
+import List from '@material-ui/core/List'
+import Divider from '@material-ui/core/Divider'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemText from '@material-ui/core/ListItemText'
 
 // SMedia Icons:
-import { FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSpotify, FaSoundcloud, FaInstagram, FaPlayCircle } from "react-icons/fa";
+import { FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSpotify, FaSoundcloud, FaInstagram, FaPlayCircle } from "react-icons/fa"
 
 const pageColor = {
   pColor: '#fc0',
