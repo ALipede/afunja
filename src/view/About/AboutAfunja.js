@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Accordion from '@material-ui/core/Accordion'
 import AccordionSummary from '@material-ui/core/AccordionSummary'
@@ -9,7 +9,9 @@ import Paper from '@material-ui/core/Paper'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 
+import ShowMoreText from 'react-show-more-text'
 import Avatar from '@material-ui/core/Avatar'
+
 import BioImgOne from './../../assets/img/bio/bio-1.jpg'
 import BioImgTwo from './../../assets/img/bio/bio-2.jpg'
 import BioImgThree from './../../assets/img/bio/bio-3.jpg'
@@ -22,6 +24,19 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 40,
         "& h5": {
             fontFamily: '"Orbitron", sans-serif;',
+        },
+    },
+    readMore: {
+        color: 'rgb(140 140 140)',
+        fontFamily: '"Lato", sans-serif',
+        fontSize: '0.9rem',
+        lineHeight: '1.2rem',
+        marginBottom: 20,
+        flexWrap: 'wrap',
+        width: '100%',
+        "& a": {
+            display: 'inline-flex',
+            width: '100%',
         },
     },
     heading: {
@@ -87,13 +102,41 @@ const afunjaBioProps = {
     },
 };
 
+class AfunjaBiography extends Component {
+ 
+        executeOnClick(isExpanded) {
+            console.log(isExpanded);
+        }
+     
+        render() {
+            return (
+                <ShowMoreText
+                    /* Default options */
+                    lines={3}
+                    more='Show more'
+                    less='Show less'
+                    anchorClass=''
+                    onClick={this.executeOnClick}
+                    expanded={false}
+                    // width={280}
+                >
+                    Afunja Music Publishing Ltd Ⓟ member of ASCAP, Tunecore, Amuse, Songtrust and PPL. Afolabi Lipede | Flame is the music producer, bass guitarist, singer and song writer. Innovative and unique style engages bass harmonics in complex chord structures with an underlying bass rift. From this style has evolved an original music: Afunja, meaning African FUNk and JAzz. solid and mesmerizing. This music evokes a feeling of colourful world culture. You can hear this unique style on Irony of Peace. Flame and Mark Christopher are currently working on new songs towards Afunja Music debut release.
+                </ShowMoreText>
+            );
+        }
+    }
+
+
+
 function AboutAfunja(props) {
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
             <h3>About Afunja</h3>
-            <p>Afunja Music Publishing Ltd <sup>Ⓟ</sup> member of ASCAP, Tunecore, Amuse, Songtrust and PPL.</p>
+            <div className={classes.readMore}>
+                <AfunjaBiography />
+            </div>
             
             {Object.keys(afunjaBioProps).map(key => (
                 <Accordion key={afunjaBioProps[key].numKey}>
