@@ -71,6 +71,8 @@ const afunjaBioProps = {
         name: "Afolabi Lipede - Flame",
         bio: "Flame is the Lead Singer, Bass Guitarist, Music Producer and Song Writer for Afunja Music Publishing. Innovative and unique style engages bass harmonics in complex chord structures with an underlying bass rift. From this style has evolved an original music: Afunja, meaning African FUNk and JAzz. solid and mesmerizing. This music evokes a feeling of colourful world culture. You can hear this unique style on 'Irony of Peace'. Flame and Mark Christopher are currently working on new songs towards Afunja Music debut release.",
         numKey: 1,
+        link: "https://igi-iroko.com",
+        linkTag: "igi iroko | multimedia",
     },
     MChristopher: {
         alt: "Mark Christopher",
@@ -78,6 +80,8 @@ const afunjaBioProps = {
         name: "Mark Christopher",
         bio: "Lead guitar, Producer and Music Director for Afunja Music Publishing.",
         numKey: 2,
+        link: "",
+        linkTag: "",
     },
     BIdowu: {
         alt: "Biola Idowu",
@@ -85,6 +89,8 @@ const afunjaBioProps = {
         name: "Biola Idowu",
         bio: "Background Vocals.",
         numKey: 3,
+        link: "http://coacoseal.com",
+        linkTag: "CoaCoSeal.com",
     },
     YAdesina: {
         alt: "Yinka Adesina",
@@ -92,6 +98,8 @@ const afunjaBioProps = {
         name: "Yinka Adesina",
         bio: "Background Vocals.",
         numKey: 4,
+        link: "https://www.youtube.com/user/YNXmusic/featured",
+        linkTag: "YNXmusic - YouTube",
     },
     JMbarani: {
         alt: "Judy Mbarani",
@@ -99,6 +107,8 @@ const afunjaBioProps = {
         name: "Judy Mbarani",
         bio: "Background Vocals.",
         numKey: 5,
+        link: "",
+        linkTag: "",
     },
 };
 
@@ -162,6 +172,9 @@ function AboutAfunja(props) {
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p">
                                         {afunjaBioProps[key].bio}
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{marginTop: 20,}}>
+                                        <a href={afunjaBioProps[key].link} target="_blank" >{afunjaBioProps[key].linkTag}</a>
                                     </Typography>
                                 </Grid>
                             </Grid>

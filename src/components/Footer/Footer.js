@@ -1,8 +1,8 @@
-import React from 'react';
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
-import { FaReact } from "react-icons/fa";
+import React from 'react'
+import { makeStyles } from "@material-ui/core/styles"
+import Typography from '@material-ui/core/Typography'
+import Link from '@material-ui/core/Link'
+import { FaReact } from "react-icons/fa"
 
 const pageColor = {
     dColor: '#666',
@@ -28,20 +28,23 @@ export default function Footer() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-        <Typography className={classes.copyright}>
-            
+            <Typography className={classes.copyright}>
+
                 <small>
                     {'All rights reserved artwork and music copyright © Afunja Music Publishing Ltd Ⓟ. 1988-'}
                     {1900 + new Date().getYear()}
                     {'am. '}
-                    <FaReact />
+                    {' | '}
+                    <Link href="https://afunja.com/privacy-statement/privacy-statement.html" alt="Privacy Statement" title="Privacy Statement" target="_parent" rel="noopener noreferrer">Privacy Statement</Link>
+                    {' | '}
+                    <sup><FaReact /></sup>
                     {' Website design & development by igi iroko | multimedia - '}
                     <Link href="https://igi-iroko.com/" alt="igi-iroko.com" title="igi-iroko.com" target="_blank" rel="noopener noreferrer">
                         {'www.igi-iroko.com'}
                     </Link>
                 </small>
-            
-        </Typography>
+
+            </Typography>
         </div>
     );
 }

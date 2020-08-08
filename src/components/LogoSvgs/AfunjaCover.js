@@ -21,7 +21,7 @@ export default function AfunjaCover() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <img src={AfunjaCoverImg} className={classes.cover} />
+            {/* <img src={AfunjaCoverImg} className={classes.cover} /> */}
         </div>
     );
 };

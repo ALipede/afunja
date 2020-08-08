@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
-import { Switch, Route, Link, BrowserRouter } from 'react-router-dom'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
+import Link from '@material-ui/core/Link'
 
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Container from '@material-ui/core/Container'
@@ -8,13 +9,12 @@ import Grid from '@material-ui/core/Grid'
 import AppBar from '@material-ui/core/AppBar'
 
 import AfunjaSvg from './components/LogoSvgs/AfunjaSvg'
-// import NavBarLinks from './components/NavBar/NavBar'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
 import ParallaxHome from './components/Parallax/ParallaxHome'
 import FollowLinks from './components/Follow/FollowLinks'
 import Stores from './view/Stores/Stores'
 import SoundCloudList from './components/SoundCloud/SoundCloudList'
-import MailChimp from './components/MailChimp/MailChimp'
+// import MailChimp from './components/MailChimp/MailChimp'
 import Contact from './components/Contact/Contact'
 import ParallaxAbout from './components/Parallax/ParallaxAbout'
 import AboutAfunja from './view/About/AboutAfunja'
@@ -24,9 +24,10 @@ import AfunjaSvgLight from './components/LogoSvgs/AfunjaSvgLight'
 import Footer from './components/Footer/Footer'
 import SwipeDrawer from './components/SwipeDrawer/SwipeDrawer'
 
+import Adverts from './components/Adverts/Adverts'
+import CookieConsent from 'react-cookie-consent'
 import IconsScroll from './view/IconsSet/IconsScroll'
 
-// import { FaShoppingCart } from "react-icons/fa"
 import './assets/scss/index.scss'
 
 const useStyles = makeStyles((theme) => ({
@@ -67,9 +68,6 @@ function Header({ children, sticky = false, className, ...rest }) {
   )
 }
 
-
-
-
 // NavBar
 const NavBarLinks = (props) => {
   const [collapsed, setCollapsed] = useState(true);
@@ -89,82 +87,95 @@ const NavBarLinks = (props) => {
             </NavItem>
           </Nav>
         </Collapse>
-
       </Navbar>
     </div>
   );
 }
-
 
 export default function Afunja() {
   const classes = useStyles();
   return (
     <BrowserRouter>
       <div className={classes.root}>
-      <Route
+        <Route
           path="/"
           render={({ location }) => (
-        
-        <Fragment>
-          <CssBaseline />
-          <Container maxWidth="md">
-            <section>
-              <AfunjaSvg />
-            </section>
 
-            <Header>
-              <AppBar position="sticky">
-                <NavBarLinks />
-              </AppBar>
-            </Header>
+            <Fragment>
+              <CssBaseline />
+              <Container maxWidth="md">
+                <section>
+                  <AfunjaSvg />
+                </section>
 
-            <Grid container spacing={3}>
-              <Grid item xs={12}>
-                <ParallaxHome />
-              </Grid>
+                <Header>
+                  <AppBar position="sticky">
+                    <NavBarLinks />
+                  </AppBar>
+                </Header>
 
-              <Grid item xs={12} sm={8}>
-                <FollowLinks />
-              </Grid>
-              <Grid item xs={12} sm={4}>
-                <SwipeDrawer />
-              </Grid>
+                <Grid container spacing={3}>
+                  <Grid item xs={12}>
+                    <ParallaxHome />
+                  </Grid>
 
-              <hr />
+                  <Grid item xs={12} sm={8}>
+                    <FollowLinks />
+                  </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <SwipeDrawer />
+                  </Grid>
 
-              <Grid item xs={12} sm={8}>
-                <Stores />
-                <SoundCloudList />
-              </Grid>
+                  <hr />
 
-              <Grid item xs={12} sm={4}>
-                <MailChimp />
-                <hr />
-                <Contact />
-              </Grid>
-              
-              <Grid item xs={12}>
-                <hr />
-                <ParallaxAbout />
-                <AboutAfunja />
-                <hr />
-                <IconsScroll />
-              </Grid>
+                  <Grid item xs={12} sm={8}>
+                    <Stores />
+                    <SoundCloudList />
+                  </Grid>
 
-            </Grid>
+                  <Grid item xs={12} sm={4}>
+                    <hr style={{ marginTop: 0, }} />
+                    <Contact />
+                    <hr />
+                    <Adverts />
+                  </Grid>
 
-            <section>
-              <AfunjaLogoSvg />
-              <JojonaIssina />
-              <AfunjaSvgLight />
-              <Footer />
-            </section>
+                  <Grid item xs={12}>
+                    <hr />
+                    <ParallaxAbout />
+                    <AboutAfunja />
+                    <hr />
+                    <IconsScroll />
+                  </Grid>
 
+                </Grid>
+
+                <section>
+                  <AfunjaLogoSvg />
+                  <JojonaIssina />
+                  <AfunjaSvgLight />
+                  <Footer />
+                </section>
+
+              </Container>
+            </Fragment>
+
+          )}
+        />
+
+        {/* <CookieConsent /> */}
+        <CookieConsent
+          location="bottom"
+          buttonText="Consent"
+          cookieName="Afunja"
+          style={{ background: "#2B373B" }}
+          buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+          expires={150}
+        >
+          <Container>
+            <small>This website uses third party cookies to enhance the user experience. <Link href="https://afunja.com/privacy-statement/privacy-statement.html" alt="Privacy Statement" title="Privacy Statement" target="_parent" rel="noopener noreferrer">Privacy Statement</Link></small>
           </Container>
-        </Fragment>
-
-)}
-/>
+        </CookieConsent>
 
       </div>
     </BrowserRouter>

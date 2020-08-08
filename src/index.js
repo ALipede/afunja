@@ -7,7 +7,6 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import theme from './assets/js/theme.js'
 
 import Afunja from './afunja'
-import PrivacyStatement from './components/PrivacyStatement/PrivacyStatement'
 import './assets/scss/index.scss'
 
 var hist = createBrowserHistory();
@@ -17,7 +16,6 @@ ReactDOM.render(
     <ThemeProvider theme={theme}>
       <MetaTag />
       <Route path="/" component={Afunja} />
-      <Route path="/privacy-statement" component={PrivacyStatement} />
     </ThemeProvider>
   </Router>,
   document.getElementById("root")
