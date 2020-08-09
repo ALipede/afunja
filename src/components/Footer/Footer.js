@@ -29,7 +29,6 @@ export default function Footer() {
     return (
         <div className={classes.root}>
             <Typography className={classes.copyright}>
-
                 <small>
                     {'All rights reserved artwork and music copyright © Afunja Music Publishing Ltd Ⓟ. 1988-'}
                     {1900 + new Date().getYear()}
@@ -43,7 +42,6 @@ export default function Footer() {
                         {'www.igi-iroko.com'}
                     </Link>
                 </small>
-
             </Typography>
         </div>
     );

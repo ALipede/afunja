@@ -11,6 +11,7 @@ $color-white: rgb(255, 255, 255);
 $color-site: rgb(3, 148, 148);
 $color-h: rgb(150, 150, 150);
 $color-p: rgb(120, 120, 120);
+$color-y: #fc0;
 
 body {
   font: 100% $font-lato !important;
@@ -21,6 +22,26 @@ h1, h2, h3, h4, h5, h6 {
   color: $color-h;
   font-family: $font-orbitron;
   text-transform: lowercase;
+}
+
+a {
+  color: $color-site;
+  &:hover {
+    color: $color-site;
+  }
+}
+
+header ul li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+header ul a {
+  color: $color-white;
+  &:hover {
+    color: $color-y;
+    text-decoration: none;
+  }
 }
 
 p, small {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { makeStyles } from "@material-ui/core/styles";
 import Iframe from 'react-iframe'
 
@@ -45,7 +45,7 @@ export default function SoundCloudList() {
     return (
         <div className={classes.root}>
             <hr />
-            <h3>Afunja - Studio Demos</h3>
+            <h3>Afunja Studio Demos</h3>
             {Object.keys(soundCloudProps).map(key => (
                 <div key={soundCloudProps[key].numKey}>
                     <Iframe url={soundCloudProps[key].url}

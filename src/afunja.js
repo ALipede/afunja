@@ -1,20 +1,18 @@
 import React, { Fragment } from 'react'
-import { Switch, Route, BrowserRouter } from 'react-router-dom'
+import { Route, BrowserRouter } from 'react-router-dom'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { makeStyles } from '@material-ui/core/styles'
-import Link from '@material-ui/core/Link'
-
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import AppBar from '@material-ui/core/AppBar'
 
 import AfunjaSvg from './components/LogoSvgs/AfunjaSvg'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap'
 import ParallaxHome from './components/Parallax/ParallaxHome'
 import FollowLinks from './components/Follow/FollowLinks'
 import Stores from './view/Stores/Stores'
 import SoundCloudList from './components/SoundCloud/SoundCloudList'
-// import MailChimp from './components/MailChimp/MailChimp'
 import Contact from './components/Contact/Contact'
 import ParallaxAbout from './components/Parallax/ParallaxAbout'
 import AboutAfunja from './view/About/AboutAfunja'
@@ -25,7 +23,6 @@ import Footer from './components/Footer/Footer'
 import SwipeDrawer from './components/SwipeDrawer/SwipeDrawer'
 
 import Adverts from './components/Adverts/Adverts'
-import CookieConsent from 'react-cookie-consent'
 import IconsScroll from './view/IconsSet/IconsScroll'
 
 import './assets/scss/index.scss'
@@ -80,10 +77,16 @@ const NavBarLinks = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/">About</NavLink>
+              <AnchorLink offset='100' href='#home'>Home</AnchorLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Icons</NavLink>
+              <AnchorLink offset='90' href='#about'>About</AnchorLink>
+            </NavItem>
+            <NavItem>
+              <AnchorLink offset='90' href='#icons'>Icons</AnchorLink>
+            </NavItem>
+            <NavItem>
+              <AnchorLink href='#subscribe'>Subscribe</AnchorLink>
             </NavItem>
           </Nav>
         </Collapse>
@@ -114,20 +117,22 @@ export default function Afunja() {
                   </AppBar>
                 </Header>
 
+                
                 <Grid container spacing={3}>
+                  
                   <Grid item xs={12}>
+                    <section id='home'>
                     <ParallaxHome />
+                    </section>
                   </Grid>
-
+                  
                   <Grid item xs={12} sm={8}>
                     <FollowLinks />
                   </Grid>
                   <Grid item xs={12} sm={4}>
                     <SwipeDrawer />
                   </Grid>
-
                   <hr />
-
                   <Grid item xs={12} sm={8}>
                     <Stores />
                     <SoundCloudList />
@@ -141,13 +146,17 @@ export default function Afunja() {
                   </Grid>
 
                   <Grid item xs={12}>
-                    <hr />
-                    <ParallaxAbout />
-                    <AboutAfunja />
-                    <hr />
-                    <IconsScroll />
+                    <section id='about'>
+                      <hr />
+                      <ParallaxAbout />
+                      <AboutAfunja />
+                    </section>
+                    
+                    <section id='icons'>
+                      <hr />
+                      <IconsScroll />
+                    </section>
                   </Grid>
-
                 </Grid>
 
                 <section>
@@ -157,26 +166,12 @@ export default function Afunja() {
                   <Footer />
                 </section>
 
+                <section id='subscribe'></section>
               </Container>
             </Fragment>
 
           )}
         />
-
-        {/* <CookieConsent /> */}
-        <CookieConsent
-          location="bottom"
-          buttonText="Consent"
-          cookieName="Afunja"
-          style={{ background: "#2B373B" }}
-          buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
-          expires={150}
-        >
-          <Container>
-            <small>This website uses third party cookies to enhance the user experience. <Link href="https://afunja.com/privacy-statement/privacy-statement.html" alt="Privacy Statement" title="Privacy Statement" target="_parent" rel="noopener noreferrer">Privacy Statement</Link></small>
-          </Container>
-        </CookieConsent>
-
       </div>
     </BrowserRouter>
   );

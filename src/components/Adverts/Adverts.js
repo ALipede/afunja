@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     },
     cover: {
         width: '100%',
-        border: '1px solid #999',
+        border: '1px solid rgba(0, 0, 0, 0.2)',
     },
 }));
 
@@ -18,7 +18,7 @@ export default function Adverts() {
     return (
         <div className={classes.root}>
             <h5>Adverts</h5>
-            <a href="http://www.crushco.net/" target="_blank" alt="www.crushco.net"><img src={Crushco} className={classes.cover} alt="www.crushco.net" /></a>
+            <a href="http://www.crushco.net/" target="_blank" alt="crushco.net" title="crushco.net"><img src={Crushco} className={classes.cover} alt="crushco.net" /></a>
         </div>
     );
 };

@@ -25,7 +25,7 @@ const Stores = (props) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <h3>Afunja - Single Releases <FaShoppingCart /></h3>
+      <h3>Afunja Releases <FaShoppingCart /></h3>
       <p>Available for Download and Streaming.</p>
       <Table responsive>
         <tbody>
