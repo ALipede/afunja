@@ -73,7 +73,7 @@ const afunjaBioProps = {
         alt: "Afolabi Lipede",
         src: BioImgOne,
         name: "Afolabi Lipede - Flame",
-        bio: "Flame is the Lead Singer, Bass Guitarist, Music Producer and Song Writer for Afunja Music Publishing. Innovative and unique style engages bass harmonics in complex chord structures with an underlying bass rift. From this style has evolved an original music: Afunja, meaning African FUNk and JAzz. solid and mesmerizing. This music evokes a feeling of colourful world culture. You can hear this unique style on 'Irony of Peace'. Flame and Mark Christopher are currently working on new songs towards Afunja Music debut release.",
+        bio: "Flame is the Lead Singer, Bass Guitarist, Producer and Song Writer for Afunja. Innovative and unique style engages bass harmonics in complex chord structures with an underlying bass rift. From this style has evolved an original music: Afunja, meaning African FUNk and JAzz. solid and mesmerizing. This music evokes a feeling of colourful world culture. You can hear this unique style on 'Irony of Peace'.",
         numKey: 1,
         link: "https://igi-iroko.com",
         linkTag: "igi iroko | multimedia",
@@ -82,7 +82,7 @@ const afunjaBioProps = {
         alt: "Mark Christopher",
         src: BioImgTwo,
         name: "Mark Christopher",
-        bio: "Lead guitar, Producer and Music Director for Afunja Music Publishing.",
+        bio: "Lead guitar, Producer and Music Director for Afunja.",
         numKey: 2,
         link: "",
         linkTag: "",
@@ -134,7 +134,7 @@ class AfunjaBiography extends Component {
                     expanded={false}
                     // width={280}
                 >
-                    Afunja Music Publishing Ltd Ⓟ member of ASCAP, Tunecore, Amuse, Songtrust and PPL. 
+                    Afunja Music Publishing Ltd <sup>Ⓟ</sup> member of ASCAP, Tunecore, Amuse, Songtrust and PPL. 
                     Afolabi Lipede | Flame is the music producer, bass guitarist, singer and song writer. 
                     Innovative and unique style engages bass harmonics in complex chord structures with an 
                     underlying bass rift. From this style has evolved an original music: Afunja, meaning 

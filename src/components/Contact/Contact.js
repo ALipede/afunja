@@ -37,7 +37,7 @@ export default function SimpleList() {
     return (
         <div className={classes.root}>
             <h4>Contact</h4>
-            <small>Please contact Afunja using the email below:</small>
+            <small><em>Please contact Afunja using the email below:</em></small>
             <List component="nav" aria-label="secondary mailbox folders" className={classes.listBkg}>
                 <ListItemLink href="mailto:afunja@afunja.com?cc=alipede@igi-iroko.com
               &amp;subject=RE:%20Afunja%20Music%20-%20Contact

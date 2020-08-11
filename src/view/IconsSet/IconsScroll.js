@@ -41,7 +41,7 @@ export default function IconsScroll() {
   return (
     <div>
       <h3>Afunja icons</h3>
-      <small>Digital Arts animated gif by A.Lipede. Please click on icons to view:</small>
+      <small><em>Digital Arts animated gif by A.Lipede. Please click on icons to view:</em></small>
       <TableContainer>
         <Table className={classes.table} aria-label="icons table">
           <TableHead>

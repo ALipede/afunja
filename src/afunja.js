@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { Route, BrowserRouter } from 'react-router-dom'
+import Page from 'react-page-loading'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { makeStyles } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -21,6 +22,8 @@ import JojonaIssina from './components/LogoSvgs/JojonaIssinaSvg'
 import AfunjaSvgLight from './components/LogoSvgs/AfunjaSvgLight'
 import Footer from './components/Footer/Footer'
 import SwipeDrawer from './components/SwipeDrawer/SwipeDrawer'
+
+import YouTubePlayer from './components/YouTube/YouTubePlayer'
 
 import Adverts from './components/Adverts/Adverts'
 import IconsScroll from './view/IconsSet/IconsScroll'
@@ -100,6 +103,7 @@ export default function Afunja() {
   return (
     <BrowserRouter>
       <div className={classes.root}>
+        <Page loader={"rotate-spin"} color={"#999999"} size={6}>
         <Route
           path="/"
           render={({ location }) => (
@@ -111,6 +115,9 @@ export default function Afunja() {
                   <AfunjaSvg />
                 </section>
 
+                
+
+                
                 <Header>
                   <AppBar position="sticky">
                     <NavBarLinks />
@@ -135,6 +142,7 @@ export default function Afunja() {
                   <hr />
                   <Grid item xs={12} sm={8}>
                     <Stores />
+                    <YouTubePlayer />
                     <SoundCloudList />
                   </Grid>
 
@@ -172,6 +180,7 @@ export default function Afunja() {
 
           )}
         />
+        </Page>
       </div>
     </BrowserRouter>
   );
