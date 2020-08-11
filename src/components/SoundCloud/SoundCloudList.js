@@ -2,6 +2,13 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Iframe from 'react-iframe'
 
+var SC = require('soundcloud');
+
+SC.initialize({
+  client_id: '30205113',
+  redirect_uri: 'https://soundcloud.com/afunja'
+});
+
 const pageColor = {
     dColor: '#666',
 }

@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import { Route, BrowserRouter } from 'react-router-dom'
-import Page from 'react-page-loading'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { makeStyles } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -103,7 +102,6 @@ export default function Afunja() {
   return (
     <BrowserRouter>
       <div className={classes.root}>
-        <Page loader={"rotate-spin"} color={"#999999"} size={6}>
         <Route
           path="/"
           render={({ location }) => (
@@ -115,9 +113,6 @@ export default function Afunja() {
                   <AfunjaSvg />
                 </section>
 
-                
-
-                
                 <Header>
                   <AppBar position="sticky">
                     <NavBarLinks />
@@ -180,7 +175,6 @@ export default function Afunja() {
 
           )}
         />
-        </Page>
       </div>
     </BrowserRouter>
   );

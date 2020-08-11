@@ -46,6 +46,7 @@
     "gatsby-link": "^2.4.13",
     "history": "^5.0.0",
     "mailchimp-react": "^0.0.7",
+    "page-preloader": "^1.2.44",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-cookie-consent": "^5.1.3",

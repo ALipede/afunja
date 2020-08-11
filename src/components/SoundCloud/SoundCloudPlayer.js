@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import ReactPlayer from 'react-player'
 
-// var SC = require('soundcloud');
+var SC = require('soundcloud');
 
-// SC.initialize({
-//   client_id: '30205113',
-//   redirect_uri: 'https://soundcloud.com/afunja'
-// });
+SC.initialize({
+  client_id: '30205113',
+  redirect_uri: 'https://soundcloud.com/afunja'
+});
 
 class SoundCloudPlayer extends Component {
   render() {
