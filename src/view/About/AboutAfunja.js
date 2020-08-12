@@ -117,46 +117,42 @@ const afunjaBioProps = {
 };
 
 class AfunjaBiography extends Component {
- 
-        executeOnClick(isExpanded) {
-            console.log(isExpanded);
-        }
-     
-        render() {
-            return (
-                <ShowMoreText
-                    /* Default options */
-                    lines={3}
-                    more='Show more'
-                    less='Show less'
-                    anchorClass=''
-                    onClick={this.executeOnClick}
-                    expanded={false}
-                    // width={280}
-                >
-                    Afunja Music Publishing Ltd <sup>Ⓟ</sup> member of ASCAP, Tunecore, Amuse, Songtrust and PPL. 
-                    Afolabi Lipede | Flame is the music producer, bass guitarist, singer and song writer. 
-                    Innovative and unique style engages bass harmonics in complex chord structures with an 
-                    underlying bass rift. From this style has evolved an original music: Afunja, meaning 
-                    African FUNk and JAzz. solid and mesmerizing. This music evokes a feeling of colourful world culture. 
-                    You can hear this unique style on Irony of Peace. Flame and Mark Christopher are currently working on new songs towards Afunja Music debut release.
-                </ShowMoreText>
-            );
-        }
+
+    executeOnClick(isExpanded) {
+        console.log(isExpanded);
     }
 
-
+    render() {
+        return (
+            <ShowMoreText
+                /* Default options */
+                lines={3}
+                more='Show more'
+                less='Show less'
+                anchorClass=''
+                onClick={this.executeOnClick}
+                expanded={false}
+            >
+                Afunja Music Publishing Ltd <sup>Ⓟ</sup> member of ASCAP, Tunecore, Amuse, Songtrust and PPL.
+                    Afolabi Lipede | Flame is the music producer, bass guitarist, singer and song writer.
+                    Innovative and unique style engages bass harmonics in complex chord structures with an
+                    underlying bass rift. From this style has evolved an original music: Afunja, meaning
+                    African FUNk and JAzz. solid and mesmerizing. This music evokes a feeling of colourful world culture.
+                    You can hear this unique style on Irony of Peace. Flame and Mark Christopher are currently working on new songs towards Afunja Music debut release.
+            </ShowMoreText>
+        );
+    }
+}
 
 function AboutAfunja(props) {
     const classes = useStyles();
-
     return (
         <div className={classes.root}>
             <h3>About Afunja</h3>
             <div className={classes.readMore}>
                 <AfunjaBiography />
             </div>
-            
+
             {Object.keys(afunjaBioProps).map(key => (
                 <Accordion key={afunjaBioProps[key].numKey}>
                     <AccordionSummary
@@ -167,7 +163,6 @@ function AboutAfunja(props) {
                         <Typography className={classes.heading}><span className={classes.name}>{afunjaBioProps[key].name}</span></Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        
                         <Box component="span" m={1} className={classes.box}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} md={3}>
@@ -182,14 +177,12 @@ function AboutAfunja(props) {
                                     <Typography variant="body2" color="textSecondary" component="p">
                                         {afunjaBioProps[key].bio}
                                     </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p" style={{marginTop: 20,}}>
+                                    <Typography variant="body2" color="textSecondary" component="p" style={{ marginTop: 20, }}>
                                         <a href={afunjaBioProps[key].link} target="_blank" >{afunjaBioProps[key].linkTag}</a>
                                     </Typography>
                                 </Grid>
                             </Grid>
-                            
                         </Box>
-
                     </AccordionDetails>
                 </Accordion>
             ))}

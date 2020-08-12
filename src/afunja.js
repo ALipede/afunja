@@ -13,6 +13,7 @@ import ParallaxHome from './components/Parallax/ParallaxHome'
 import FollowLinks from './components/Follow/FollowLinks'
 import Stores from './view/Stores/Stores'
 import SoundCloudList from './components/SoundCloud/SoundCloudList'
+import MailChimp from './components/MailChimp/MailChimp'
 import Contact from './components/Contact/Contact'
 import ParallaxAbout from './components/Parallax/ParallaxAbout'
 import AboutAfunja from './view/About/AboutAfunja'
@@ -142,7 +143,11 @@ export default function Afunja() {
                   </Grid>
 
                   <Grid item xs={12} sm={4}>
+                  <section id='subscribe'>
                     <hr style={{ marginTop: 0, }} />
+                    <MailChimp />
+                  </section>  
+                    <hr />
                     <Contact />
                     <hr />
                     <Adverts />
@@ -169,7 +174,6 @@ export default function Afunja() {
                   <Footer />
                 </section>
 
-                <section id='subscribe'></section>
               </Container>
             </Fragment>
 

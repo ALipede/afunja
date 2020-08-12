@@ -23,7 +23,7 @@ export default function YouTubePlayer() {
             <p>
                 <small><strong>Afunja - Colours</strong> (Instrumental)
                 <br />
-                <em>Featuring Dele Sosimi on keyboard solo, Kate Luxmoore on clarinet and Lekan Babalola on percussion.</em></small>
+                    <em>Featuring Dele Sosimi on keyboard solo, Kate Luxmoore on clarinet and Lekan Babalola on percussion.</em></small>
             </p>
         </div>
     );
