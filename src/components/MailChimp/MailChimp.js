@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
   mailChimp: {
     width: '100%',
-    height: 360,
+    height: 375,
     position: 'relative',
     marginTop: 7,
     border: 0,
