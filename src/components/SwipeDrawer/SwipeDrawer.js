@@ -11,11 +11,11 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 
 // SMedia Icons:
-import { FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSpotify, FaSoundcloud, FaInstagram, FaPlayCircle } from "react-icons/fa"
+import { FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSpotify, FaSoundcloud, FaInstagram, FaPlayCircle, FaReddit } from "react-icons/fa"
 
 const pageColor = {
   pColor: '#fc0',
-  hColor: '#666',
+  hColor: '#999',
 }
 const useStyles = makeStyles({
   root: {
@@ -26,14 +26,14 @@ const useStyles = makeStyles({
       textDecoration: 'none',
       display: 'block',
       fontSize: '0.9rem',
-      "& a:hover": {
-        color: '#FFF',
-        textDecoration: 'none',
-      },
-      "& a:focus": {
-        color: '#FFF',
-        textDecoration: 'none',
-      },
+    },
+    "& a:hover": {
+      color: pageColor.hColor,
+      textDecoration: 'none',
+    },
+    "& a:focus": {
+      color: pageColor.hColor,
+      textDecoration: 'none',
     },
   },
   iconFa: {
@@ -73,7 +73,6 @@ const useStyles = makeStyles({
     right: 0,
     width: '100%',
     fontFamily: '"Orbitron", sans-serif',
-    // textTransform: 'none',
     "&:hover": {
       color: '#fff',
       background: pageColor.hColor,
@@ -118,7 +117,14 @@ const sMediaProps = {
     sIcon: <FaInstagram />,
     text: "Instagram",
     numKey: 8,
-  }
+  },
+  Reddit: {
+    name: "Reddit",
+    url: "https://www.reddit.com/user/Afunja/",
+    sIcon: <FaReddit />,
+    text: "Reddit",
+    numKey: 8,
+  },
 };
 
 const sMediaPlayerProps = {
@@ -208,23 +214,19 @@ export default function SwipeDrawer() {
     <div>
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-
           <Tab label="follow us" onClick={toggleDrawer(anchor, true)} className={classes.tabEight} />
-
           <SwipeableDrawer
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
             onOpen={toggleDrawer(anchor, true)}
           >
-
             <div className={classes.root}>
               <h4 className={classes.title}>Follow Us:</h4>
               <Divider className={classes.divider} />
               {sMedia(anchor)}
             </div>
           </SwipeableDrawer>
-          
         </React.Fragment>
       ))}
     </div>

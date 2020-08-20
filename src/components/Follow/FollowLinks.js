@@ -2,10 +2,11 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 // SMedia Icons:
-import { FaSpotify, FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSoundcloud, FaInstagram, FaPlayCircle } from "react-icons/fa";
+import { FaSpotify, FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSoundcloud, FaInstagram, FaPlayCircle, FaReddit } from "react-icons/fa";
 
 const pageColor = {
     pColor: '#999',
+    hColor: '#fc0',
 }
 const useStyles = makeStyles({
     root: {
@@ -15,6 +16,12 @@ const useStyles = makeStyles({
             marginRight: 5,
             color: pageColor.pColor
         },
+        "& a:hover": {
+            color: pageColor.hColor
+        },
+        "& a:focus": {
+            color: pageColor.hColor
+          },
     },
 })
 
@@ -76,6 +83,13 @@ const sMediaLinksProps = {
         sIcon: <FaInstagram />,
         alt: "Instagram",
         numKey: 8,
+    },
+    Reddit: {
+        name: "Reddit",
+        url: "https://www.reddit.com/user/Afunja/",
+        sIcon: <FaReddit />,
+        alt: "Reddit",
+        numKey: 9,
     },
 };
 
