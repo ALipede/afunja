@@ -1,5 +1,5 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 
 // SMedia Icons:
 import { FaSpotify, FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSoundcloud, FaInstagram, FaPlayCircle, FaReddit } from "react-icons/fa";

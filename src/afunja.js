@@ -88,7 +88,7 @@ const NavBarLinks = (props) => {
               <AnchorLink offset='90' href='#icons'>Icons</AnchorLink>
             </NavItem>
             <NavItem>
-              <AnchorLink href='#subscribe'>Subscribe</AnchorLink>
+              <AnchorLink offset='90' href='#subscribe'>Subscribe</AnchorLink>
             </NavItem>
           </Nav>
         </Collapse>
