@@ -151,7 +151,7 @@ const sMediaPlayerProps = {
   },
   YouTube: {
     name: "YouTube",
-    url: "https://www.youtube.com/user/igiiroko",
+    url: "https://youtube.com/channel/UCStRlfupgbGXNJz5O_NkbIQ",
     sIcon: <FaYoutube />,
     text: "YouTube",
     numKey: 4,
