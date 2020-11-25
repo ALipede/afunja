@@ -50,6 +50,17 @@ export default function YouTubeAfunja() {
                 <br />
                     <em>Featuring Dele Sosimi on keyboard solo, Kate Luxmoore on clarinet and Lekan Babalola on percussion.</em></small>
             </p>
+
+            <hr />
+
+            <YouTube
+                videoId="_weGxRrwx64"
+                opts={opts}
+                className={classes.youTubePlayer}
+            />
+            <p>
+                <small><em>AFUNJA Music</em> - <strong>Afunja</strong></small>
+            </p>
         </div>
     );
 }

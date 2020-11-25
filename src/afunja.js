@@ -12,7 +12,8 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reac
 import ParallaxHome from './components/Parallax/ParallaxHome'
 import FollowLinks from './components/Follow/FollowLinks'
 import Stores from './view/Stores/Stores'
-import YouTubePlayer from './components/YouTube/YouTubePlayer'
+import EndSars from './view/Stores/EndSars'
+import YouTubeChannel from './components/YouTube/YouTubeChannel'
 import SoundCloudList from './components/SoundCloud/SoundCloudList'
 import MailChimp from './components/MailChimp/MailChimp'
 import Contact from './components/Contact/Contact'
@@ -23,6 +24,8 @@ import JojonaIssina from './components/LogoSvgs/JojonaIssinaSvg'
 import AfunjaSvgLight from './components/LogoSvgs/AfunjaSvgLight'
 import Footer from './components/Footer/Footer'
 import SwipeDrawer from './components/SwipeDrawer/SwipeDrawer'
+
+import ParallaxFree from './components/Parallax/ParallaxFree'
 
 import Adverts from './components/Adverts/Adverts'
 import IconsScroll from './view/IconsSet/IconsScroll'
@@ -136,7 +139,8 @@ export default function Afunja() {
                   <hr />
                   <Grid item xs={12} sm={8}>
                     <Stores />
-                    <YouTubePlayer />
+                    <EndSars />
+                    <YouTubeChannel />
                     <SoundCloudList />
                   </Grid>
 
@@ -166,7 +170,9 @@ export default function Afunja() {
                 </Grid>
 
                 <section>
+                  
                   <AfunjaLogoSvg />
+                  <ParallaxFree />
                   <JojonaIssina />
                   <AfunjaSvgLight />
                   <Footer />
