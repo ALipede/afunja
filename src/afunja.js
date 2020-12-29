@@ -26,9 +26,9 @@ import Footer from './components/Footer/Footer'
 import SwipeDrawer from './components/SwipeDrawer/SwipeDrawer'
 
 import ParallaxFree from './components/Parallax/ParallaxFree'
-
 import Adverts from './components/Adverts/Adverts'
 import IconsScroll from './view/IconsSet/IconsScroll'
+// import WebLinks from './components/WebLinks/WebLinks'
 
 import './assets/scss/index.scss'
 
@@ -123,13 +123,13 @@ export default function Afunja() {
                 </Header>
 
                 <Grid container spacing={3}>
-                  
+
                   <Grid item xs={12}>
                     <section id='home'>
-                    <ParallaxHome />
+                      <ParallaxHome />
                     </section>
                   </Grid>
-                  
+
                   <Grid item xs={12} sm={8}>
                     <FollowLinks />
                   </Grid>
@@ -145,14 +145,16 @@ export default function Afunja() {
                   </Grid>
 
                   <Grid item xs={12} sm={4}>
-                  <section id='subscribe'>
-                    <hr style={{ marginTop: 0, }} />
-                    <MailChimp />
-                  </section>  
+                    <section id='subscribe'>
+                      <hr style={{ marginTop: 0, }} />
+                      <MailChimp />
+                    </section>
                     <hr />
                     <Contact />
                     <hr />
                     <Adverts />
+                    <hr />
+                    {/* <WebLinks /> */}
                   </Grid>
 
                   <Grid item xs={12}>
@@ -161,7 +163,7 @@ export default function Afunja() {
                       <ParallaxAbout />
                       <AboutAfunja />
                     </section>
-                    
+
                     <section id='icons'>
                       <hr />
                       <IconsScroll />
@@ -170,7 +172,7 @@ export default function Afunja() {
                 </Grid>
 
                 <section>
-                  
+
                   <AfunjaLogoSvg />
                   <ParallaxFree />
                   <JojonaIssina />

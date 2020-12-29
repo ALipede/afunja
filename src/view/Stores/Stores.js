@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
   },
   stores: {
     marginBottom: '1rem',
-    // maxHeight: 35,
     width: '100%',
   },
 }));
@@ -41,7 +40,7 @@ const Stores = (props) => {
     <div className={classes.root}>
       <h3>New Releases <FaShoppingCart /></h3>
       <img src={StoreIcons} className={classes.stores} alt="Stores" />
-      <p>Available for Download and Streaming <FaHandPointRight style={{marginLeft: 10, marginTop: -5, color: '#0c6da4'}} /></p>
+      <p>Available for Download and Streaming <FaHandPointRight style={{ marginLeft: 10, marginTop: -5, color: '#0c6da4' }} /></p>
       <Table responsive>
         <tbody>
           <tr className={classes.store}>
