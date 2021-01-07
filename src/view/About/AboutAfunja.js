@@ -73,7 +73,7 @@ const afunjaBioProps = {
         alt: "Afolabi Lipede",
         src: BioImgOne,
         name: "Afolabi Lipede - Flame",
-        bio: "Flame is the Lead Singer, Bass Guitarist, Producer and Song Writer for Afunja. Innovative and unique style engages bass harmonics in complex chord structures with an underlying bass rift. From this style has evolved an original music: Afunja, meaning African FUNk and JAzz. solid and mesmerizing. This music evokes a feeling of colourful world culture. You can hear this unique style on 'Irony of Peace'.",
+        bio: "Flame is the Lead Singer, Bass Guitarist, Producer and Song Writer for Afunja. Innovative and unique style engages bass harmonics in complex chord structures with an underlying bass riff. From this style has evolved an original music: Afunja, meaning African FUNk and JAzz. solid and mesmerizing. This music evokes a feeling of colourful world culture. You can hear this unique style on 'Irony of Peace'.",
         numKey: 1,
         link: "https://igi-iroko.com",
         linkTag: "igi iroko | multimedia",
@@ -126,19 +126,14 @@ class AfunjaBiography extends Component {
         return (
             <ShowMoreText
                 /* Default options */
-                lines={3}
+                lines={1}
                 more='Show more'
                 less='Show less'
                 anchorClass=''
                 onClick={this.executeOnClick}
                 expanded={false}
             >
-                Afunja Music Publishing Ltd <sup>Ⓟ</sup> member of ASCAP, Tunecore, Amuse, Songtrust and PPL.
-                    Afolabi Lipede | Flame is the music producer, bass guitarist, singer and song writer.
-                    Innovative and unique style engages bass harmonics in complex chord structures with an
-                    underlying bass rift. From this style has evolved an original music: Afunja, meaning
-                    African FUNk and JAzz. solid and mesmerizing. This music evokes a feeling of colourful world culture.
-                    You can hear this unique style on Irony of Peace. Flame and Mark Christopher are currently working on new songs towards Afunja Music debut release.
+                Afolabi Lipede | Flame music producer, bass guitarist, singer and song writer. Mark Christopher music director and guitarist. Flame's innovative and unique style engages bass harmonics in complex chord structures with an underlying bass riff. From this style has evolved an original style of music: AFUNJA, meaning African FUNk and JAzz. Solid and mesmerising, this music evokes a feeling of a colourful world culture. You can hear this unique style on Free.<br /><br />Afunja Music Publishing Ltd <sup>Ⓟ</sup> member of ASCAP, Tunecore, Amuse, Songtrust and PPL.
             </ShowMoreText>
         );
     }

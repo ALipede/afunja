@@ -43,7 +43,7 @@ const sMediaLinksProps = {
     },
     SoundCloud: {
         name: "SoundCloud",
-        url: "https://soundcloud.com/afunja",
+        url: "https://soundcloud.com/afunja-music",
         sIcon: <FaSoundcloud />,
         alt: "SoundCloud",
         numKey: 3,

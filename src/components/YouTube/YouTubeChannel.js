@@ -20,7 +20,7 @@ export default function YouTubeChannel() {
     return (
         <div className={classes.root}>
             <h3>Afunja Videos</h3>
-            <p><small><em>YouTube Channel</em></small></p>
+            <p><small><em>YouTube Channel. Please refresh page if video does not appear. *</em></small></p>
             <ReactPlayer
                 url="https://www.youtube.com/playlist?list=PLLdMtVL7UT6ZJQNnTPHKMwQBNehwLIydv"
                 width="100%"

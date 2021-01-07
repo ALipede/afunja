@@ -85,6 +85,12 @@ const NavBarLinks = (props) => {
               <AnchorLink offset='100' href='#home'>Home</AnchorLink>
             </NavItem>
             <NavItem>
+              <AnchorLink offset='100' href='#buy'>Buy</AnchorLink>
+            </NavItem>
+            <NavItem>
+              <AnchorLink offset='100' href='#videos'>Videos</AnchorLink>
+            </NavItem>
+            <NavItem>
               <AnchorLink offset='90' href='#about'>About</AnchorLink>
             </NavItem>
             <NavItem>
@@ -138,9 +144,13 @@ export default function Afunja() {
                   </Grid>
                   <hr />
                   <Grid item xs={12} sm={8}>
-                    <Stores />
+                    <section id='buy'>
+                      <Stores />
+                    </section>
                     <EndSars />
-                    <YouTubeChannel />
+                    <section id='videos'>
+                      <YouTubeChannel />
+                    </section>
                     <SoundCloudList />
                   </Grid>
 

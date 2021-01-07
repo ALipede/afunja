@@ -144,7 +144,7 @@ const sMediaPlayerProps = {
   },
   SoundCloud: {
     name: "SoundCloud",
-    url: "https://soundcloud.com/afunja",
+    url: "https://soundcloud.com/afunja-music",
     sIcon: <FaSoundcloud />,
     text: "SoundCloud",
     numKey: 3,

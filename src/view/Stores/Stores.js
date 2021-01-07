@@ -38,7 +38,7 @@ const Stores = (props) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <h3>New Releases <FaShoppingCart /></h3>
+      <h3>Buy <FaShoppingCart /></h3>
       <img src={StoreIcons} className={classes.stores} alt="Stores" />
       <p>Available for Download and Streaming <FaHandPointRight style={{ marginLeft: 10, marginTop: -5, color: '#0c6da4' }} /></p>
       <Table responsive>

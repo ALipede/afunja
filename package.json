@@ -30,8 +30,8 @@
     "file-loader": "^5.1.0",
     "html-webpack-plugin": "^4.3.0",
     "postcss-loader": "^3.0.0",
-    "sass": "^1.26.10",
-    "sass-loader": "^9.0.2",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
     "style-loader": "^1.2.1",
     "url-loader": "^3.0.0",
     "webpack": "^4.44.1",
@@ -74,8 +74,8 @@
     "react-youtube": "^7.11.3",
     "reactstrap": "^8.5.1",
     "read-more-react": "^1.0.10",
-    "sass": "^1.22.10",
-    "sass-loader": "^7.2.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
     "soundcloud": "^3.3.2"
   }
 }
