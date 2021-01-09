@@ -15,6 +15,7 @@ import Stores from './view/Stores/Stores'
 import EndSars from './view/Stores/EndSars'
 import YouTubeChannel from './components/YouTube/YouTubeChannel'
 import SoundCloudList from './components/SoundCloud/SoundCloudList'
+import AfunjaReleases from './components/SoundCloud/SoundCloudReleases'
 import MailChimp from './components/MailChimp/MailChimp'
 import Contact from './components/Contact/Contact'
 import ParallaxAbout from './components/Parallax/ParallaxAbout'
@@ -88,6 +89,9 @@ const NavBarLinks = (props) => {
               <AnchorLink offset='100' href='#buy'>Buy</AnchorLink>
             </NavItem>
             <NavItem>
+              <AnchorLink offset='100' href='#play'>Play</AnchorLink>
+            </NavItem>
+            <NavItem>
               <AnchorLink offset='100' href='#videos'>Videos</AnchorLink>
             </NavItem>
             <NavItem>
@@ -146,6 +150,9 @@ export default function Afunja() {
                   <Grid item xs={12} sm={8}>
                     <section id='buy'>
                       <Stores />
+                    </section>
+                    <section id='play'>
+                      <AfunjaReleases />
                     </section>
                     <EndSars />
                     <section id='videos'>

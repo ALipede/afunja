@@ -11,7 +11,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 
 // SMedia Icons:
-import { FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSpotify, FaSoundcloud, FaInstagram, FaPlayCircle, FaReddit } from "react-icons/fa"
+import { FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSpotify, FaSoundcloud, FaInstagram, FaPlayCircle, FaReddit, FaBandcamp } from "react-icons/fa"
 
 const pageColor = {
   pColor: '#fc0',
@@ -156,6 +156,13 @@ const sMediaPlayerProps = {
     text: "YouTube",
     numKey: 4,
   },
+  Bandcamp: {
+    name: "Bandcamp",
+    url: "https://afunja.bandcamp.com",
+    sIcon: <FaBandcamp />,
+    text: "Bandcamp",
+    numKey: 5,
+},
 };
 
 export default function SwipeDrawer() {

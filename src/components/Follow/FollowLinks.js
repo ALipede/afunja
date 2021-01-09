@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
 // SMedia Icons:
-import { FaSpotify, FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSoundcloud, FaInstagram, FaPlayCircle, FaReddit } from "react-icons/fa";
+import { FaSpotify, FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSoundcloud, FaInstagram, FaPlayCircle, FaReddit, FaBandcamp } from "react-icons/fa";
 
 const pageColor = {
     pColor: '#999',
@@ -90,6 +90,13 @@ const sMediaLinksProps = {
         sIcon: <FaReddit />,
         alt: "Reddit",
         numKey: 9,
+    },
+    Bandcamp: {
+        name: "Bandcamp",
+        url: "https://afunja.bandcamp.com",
+        sIcon: <FaBandcamp />,
+        alt: "Bandcamp",
+        numKey: 10,
     },
 };
 

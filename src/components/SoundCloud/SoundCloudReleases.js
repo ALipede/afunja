@@ -2,11 +2,13 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Iframe from 'react-iframe'
 
+import { FaSoundcloud } from "react-icons/fa"
+
 var SC = require('soundcloud');
 
 SC.initialize({
-    client_id: '30205113',
-    redirect_uri: 'https://soundcloud.com/afunja'
+    client_id: '839605942',
+    redirect_uri: 'https://soundcloud.com/afunja-music'
 });
 
 const pageColor = {
@@ -20,7 +22,7 @@ const useStyles = makeStyles({
     },
     soundCloud: {
         border: 'none',
-        height: 30,
+        height: 380,
         width: '100%',
         backgroundColor: 'rgb(245 245 245)',
         border: '5px solid rgb(245 245 245)',
@@ -29,30 +31,18 @@ const useStyles = makeStyles({
 
 // SoundCloud Props:
 const soundCloudProps = {
-    IronyOfPeace: {
-        url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/70735660&color=%23ff5500&inverse=false&auto_play=false&show_user=true",
+    AfunjaReleases2020: {
+        url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1186224781&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
         numKey: 1,
-    },
-    cia: {
-        url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/291824556&color=%23ff5500&inverse=false&auto_play=false&show_user=true",
-        numKey: 2,
-    },
-    civilPropaganda: {
-        url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/292886934&color=%23ff5500&inverse=false&auto_play=false&show_user=true",
-        numKey: 3,
-    },
-    toBe: {
-        url: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/296206940&color=%23ff5500&inverse=false&auto_play=false&show_user=true",
-        numKey: 4,
     },
 };
 
-export default function SoundCloudList() {
+export default function SoundCloudReleases() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
             <hr />
-            <h3>Afunja Studio Demos</h3>
+            <h3>Afunja Music <FaSoundcloud /></h3>
             {Object.keys(soundCloudProps).map(key => (
                 <div key={soundCloudProps[key].numKey}>
                     <Iframe url={soundCloudProps[key].url}
