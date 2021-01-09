@@ -11,7 +11,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 
 // SMedia Icons:
-import { FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSpotify, FaSoundcloud, FaInstagram, FaPlayCircle, FaReddit, FaBandcamp } from "react-icons/fa"
+import { FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSpotify, FaSoundcloud, FaInstagram, FaPlayCircle, FaReddit, FaBandcamp } from 'react-icons/fa'
+import { SiReverbnation } from 'react-icons/si'
 
 const pageColor = {
   pColor: '#fc0',
@@ -162,7 +163,14 @@ const sMediaPlayerProps = {
     sIcon: <FaBandcamp />,
     text: "Bandcamp",
     numKey: 5,
-},
+  },
+  Reverbnation: {
+    name: "Reverbnation",
+    url: "https://www.reverbnation.com/afunja",
+    sIcon: <SiReverbnation />,
+    text: "Reverbnation",
+    numKey: 6,
+  },
 };
 
 export default function SwipeDrawer() {

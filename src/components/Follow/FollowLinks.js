@@ -2,7 +2,8 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
 // SMedia Icons:
-import { FaSpotify, FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSoundcloud, FaInstagram, FaPlayCircle, FaReddit, FaBandcamp } from "react-icons/fa";
+import { FaSpotify, FaTwitter, FaFacebookSquare, FaYoutube, FaFlickr, FaSoundcloud, FaInstagram, FaPlayCircle, FaReddit, FaBandcamp } from 'react-icons/fa'
+import { SiReverbnation } from 'react-icons/si'
 
 const pageColor = {
     pColor: '#999',
@@ -97,6 +98,13 @@ const sMediaLinksProps = {
         sIcon: <FaBandcamp />,
         alt: "Bandcamp",
         numKey: 10,
+    },
+    Reverbnation: {
+        name: "Reverbnation",
+        url: "https://www.reverbnation.com/afunja",
+        sIcon: <SiReverbnation />,
+        text: "Reverbnation",
+        numKey: 6,
     },
 };
 
