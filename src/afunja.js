@@ -77,31 +77,38 @@ const NavBarLinks = (props) => {
   const toggleNavbar = () => setCollapsed(!collapsed);
   return (
     <div>
-      <Navbar color="faded" dark value={location.pathname}>
+      {/* <Navbar color="faded" dark value={location.pathname}> */}
+      <Navbar color="faded" dark>
         <NavbarBrand href="/" className="mr-auto">african funk &amp; jazz</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
-            <NavItem>
-              <AnchorLink offset='100' href='#home'>Home</AnchorLink>
+            <NavItem onClick={toggleNavbar} >
+              <AnchorLink offset='600' href='#home'>Home</AnchorLink>
             </NavItem>
-            <NavItem>
-              <AnchorLink offset='100' href='#buy'>Buy</AnchorLink>
+            <NavItem onClick={toggleNavbar} >
+              <AnchorLink offset='420' href='#buy'>Buy</AnchorLink>
             </NavItem>
-            <NavItem>
-              <AnchorLink offset='100' href='#play'>Play</AnchorLink>
+            <NavItem onClick={toggleNavbar} >
+              <AnchorLink offset='420' href='#play'>Play</AnchorLink>
             </NavItem>
-            <NavItem>
-              <AnchorLink offset='100' href='#videos'>Videos</AnchorLink>
+            <NavItem onClick={toggleNavbar} >
+              <AnchorLink offset='420' href='#videos'>Videos</AnchorLink>
             </NavItem>
-            <NavItem>
-              <AnchorLink offset='90' href='#about'>About</AnchorLink>
+            <NavItem onClick={toggleNavbar} >
+              <AnchorLink offset='420' href='#demos'>Demos</AnchorLink>
             </NavItem>
-            <NavItem>
-              <AnchorLink offset='90' href='#icons'>Icons</AnchorLink>
+            <NavItem onClick={toggleNavbar} >
+              <AnchorLink offset='420' href='#about'>About</AnchorLink>
             </NavItem>
-            <NavItem>
-              <AnchorLink offset='90' href='#subscribe'>Subscribe</AnchorLink>
+            <NavItem onClick={toggleNavbar} >
+              <AnchorLink offset='420' href='#icons'>Icons</AnchorLink>
+            </NavItem>
+            <NavItem onClick={toggleNavbar} >
+              <AnchorLink offset='420' href='#subscribe'>Subscribe</AnchorLink>
+            </NavItem>
+            <NavItem onClick={toggleNavbar} >
+              <AnchorLink offset='420' href='#contact'>Contact</AnchorLink>
             </NavItem>
           </Nav>
         </Collapse>
@@ -116,7 +123,7 @@ export default function Afunja() {
     <BrowserRouter>
       <div className={classes.root}>
         <Route
-          path="/"
+          // path="/"
           render={({ location }) => (
 
             <Fragment>
@@ -158,7 +165,10 @@ export default function Afunja() {
                     <section id='videos'>
                       <YouTubeChannel />
                     </section>
-                    <SoundCloudList />
+                    <section id='demos'>
+                      <SoundCloudList />
+                    </section>
+                    
                   </Grid>
 
                   <Grid item xs={12} sm={4}>
@@ -167,7 +177,9 @@ export default function Afunja() {
                       <MailChimp />
                     </section>
                     <hr />
-                    <Contact />
+                    <section id='contact'>
+                      <Contact />
+                    </section>
                     <hr />
                     <Adverts />
                     <hr />

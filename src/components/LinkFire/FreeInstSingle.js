@@ -11,7 +11,7 @@ export default function FreeInstSingle() {
             src="https://lnk.to/afunja_free_instrumental/widget?view=clickthroughwidget?view=clickthrough" 
             // id="FreeInst"
             height="300px" 
-            width="300px" 
+            width="100%" 
             />
         </div>
     )

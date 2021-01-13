@@ -104,7 +104,7 @@ const sMediaLinksProps = {
         url: "https://www.reverbnation.com/afunja",
         sIcon: <SiReverbnation />,
         text: "Reverbnation",
-        numKey: 6,
+        numKey: 11,
     },
 };
 

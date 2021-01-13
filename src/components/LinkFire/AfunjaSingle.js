@@ -11,7 +11,7 @@ export default function AfunjaSingle() {
             src="https://lnk.to/afunja/widget?view=clickthroughwidget?view=clickthrough" 
             // id="Afunja" 
             height="300px" 
-            width="300px" 
+            width="100%" 
             />
         </div>
     )

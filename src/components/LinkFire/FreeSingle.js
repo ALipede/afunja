@@ -11,7 +11,7 @@ export default function FreeSingle() {
             src="https://lnk.to/afunja_free/widget?view=clickthroughwidget?view=clickthrough" 
             // id="Free" 
             height="300px" 
-            width="300px" 
+            width="100%" 
             />
         </div>
     )

@@ -1,10 +1,14 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Orbitron:wght@400;500;600;700&family=Roboto:wght@100;300;400;500&display=swap');
 @import "~bootstrap/scss/bootstrap";
+@import "./../../../node_modules/react-alice-carousel/lib/scss/alice-carousel.scss";
 
-$font-roboto: 'Roboto', sans-serif;
-$font-orbitron: 'Orbitron', sans-serif;
-$font-lato: 'Lato', sans-serif;
+$font-roboto: 'Roboto',
+sans-serif;
+$font-orbitron: 'Orbitron',
+sans-serif;
+$font-lato: 'Lato',
+sans-serif;
 
 $color-body: rgb(229, 229, 229);
 $color-white: rgb(255, 255, 255);
@@ -18,7 +22,12 @@ body {
   margin-bottom: 60px !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $color-h;
   font-family: $font-orbitron;
   text-transform: lowercase;
@@ -26,6 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: $color-site;
+
   &:hover {
     color: $color-site;
   }
@@ -38,39 +48,91 @@ header ul li {
 
 header ul a {
   color: $color-white;
+  // border-top: 1px solid #999999;
+  width: 100%;
+  display: inline-block;
+
   &:hover {
     color: $color-y;
     text-decoration: none;
   }
 }
 
-p, small {
+p,
+small {
   color: $color-p;
 }
 
 // smart sticky header 
-header{
-    position: sticky;
-    top: -1px;
-    transition: .2s ease-out;
-    z-index: 1000;
-    
-    &.isSticky{
-      &::after{
-        // content:" Afunja Music Publishing Ltd";
-        color: #fff;
-        padding: 20px;
-      }
+header {
+  position: sticky;
+  top: -1px;
+  transition: .2s ease-out;
+  z-index: 1000;
+
+  &.isSticky {
+    &::after {
+      // content:" Afunja Music Publishing Ltd";
+      color: $color-white;
+      padding: 20px;
     }
   }
+}
 
 
-  // Page Loader
-  .pageLoader {
-    // background-color: #fc0;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
+// Page Loader
+.pageLoader {
+  // background-color: #fc0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+// Store Carousel
+.alice-carousel__stage-item {
+  padding-right: 5px;
+}
+
+.alice-carousel__dots {
+  margin: 5px 3px 5px;
+}
+
+.alice-carousel__play-btn {
+  top: 305px;
+}
+
+.alice-carousel__play-btn-wrapper {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: $color-white;
+}
+
+// Play
+.alice-carousel__play-btn-item::before,
+.alice-carousel__play-btn-item::after {
+  top: 0;
+  left: 0;
+  height: 14px;
+}
+
+.alice-carousel__play-btn-item.__pause::before {
+  top: 0;
+  left: 0;
+}
+
+.alice-carousel__play-btn-item.__pause::after {
+  top: 0;
+  left: 8px;
+}
+
+// Pause
+.alice-carousel__play-btn-item.__pause::before,
+.alice-carousel__play-btn-item.__pause::after {
+  height: 14px;
+  border-width: 0 0 0 6px;
+}

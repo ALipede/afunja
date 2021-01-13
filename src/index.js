@@ -5,6 +5,7 @@ import { Router, Route } from 'react-router-dom'
 import MetaTag from './components/MetaTag/MetaTag'
 import { ThemeProvider } from '@material-ui/core/styles'
 import theme from './assets/js/theme.js'
+import * as serviceWorker from './serviceWorker'
 
 import Loading from './loading'
 import './assets/scss/index.scss'
@@ -21,3 +22,5 @@ ReactDOM.render(
   </Router>,
   document.getElementById("root")
 );
+
+serviceWorker.unregister();
