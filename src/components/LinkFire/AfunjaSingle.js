@@ -9,7 +9,7 @@ export default function AfunjaSingle() {
             <LinkFireWidget
             data-lnk-widget
             src="https://lnk.to/afunja/widget?view=clickthroughwidget?view=clickthrough" 
-            // id="Afunja" 
+            id="Afunja" 
             height="300px" 
             width="100%" 
             />

@@ -27,6 +27,10 @@ const responsive = {
   1024: { items: 2 },
 };
 
+const renderSlideInfo = ({ item, itemsCount }) => {
+  return `${item}\\${itemsCount}`;
+};
+
 const items = [
     <AfunjaSingle />,
     <FreeSingle />,
@@ -51,6 +55,8 @@ const Stores = () => {
         infinite
         touchTracking={false}
         // disableDotsControls
+        disableSlideInfo={false}
+        renderSlideInfo={renderSlideInfo}
         disableButtonsControls
         responsive={responsive}
         paddingLeft={0}

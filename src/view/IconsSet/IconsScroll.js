@@ -27,12 +27,12 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(num, icon001, icon003, icon002) {
-  return { num, icon001, icon003, icon002 };
+function createData(num, icon003, icon001, icon002) {
+  return { num, icon003, icon001, icon002 };
 }
 
 const rows = [
-  createData(1, <IconsSection001 />, <IconsSection003 />, <IconsSection002 />),
+  createData(1, <IconsSection003 />, <IconsSection001 />, <IconsSection002 />),
 ];
 
 export default function IconsScroll() {
@@ -46,16 +46,16 @@ export default function IconsScroll() {
         <Table className={classes.table} aria-label="icons table">
           <TableHead>
             <TableRow>
-              <TableCell className={classes.tableCell}>ICONS 001</TableCell>
               <TableCell className={classes.tableCell}>Myth of Being</TableCell>
+              <TableCell className={classes.tableCell}>ICONS 001</TableCell>
               <TableCell className={classes.tableCell}>ICONS 002</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row) => (
               <TableRow key={row.num}>
-                <TableCell className={classes.tableCellTd}>{row.icon001}</TableCell>
                 <TableCell className={classes.tableCellTd}>{row.icon003}</TableCell>
+                <TableCell className={classes.tableCellTd}>{row.icon001}</TableCell>
                 <TableCell className={classes.tableCellTd}>{row.icon002}</TableCell>
               </TableRow>
             ))}

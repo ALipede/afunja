@@ -9,7 +9,7 @@ export default function FreeSingle() {
             <LinkFireWidget
             data-lnk-widget
             src="https://lnk.to/afunja_free/widget?view=clickthroughwidget?view=clickthrough" 
-            // id="Free" 
+            id="Free" 
             height="300px" 
             width="100%" 
             />
