@@ -21,6 +21,7 @@ export default function YouTubeChannel() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
+            <hr />
             <h3>Afunja Videos <FaYoutube /></h3>
             <p><small><em>YouTube Channel. Please refresh page if video does not appear. *</em></small></p>
             <ReactPlayer

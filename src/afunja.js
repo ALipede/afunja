@@ -12,7 +12,7 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reac
 import ParallaxHome from './components/Parallax/ParallaxHome'
 import FollowLinks from './components/Follow/FollowLinks'
 import Stores from './view/Stores/Stores'
-import EndSars from './view/Stores/EndSars'
+// import EndSars from './view/Stores/EndSars'
 import YouTubeChannel from './components/YouTube/YouTubeChannel'
 import SoundCloudList from './components/SoundCloud/SoundCloudList'
 import AfunjaReleases from './components/SoundCloud/SoundCloudReleases'
@@ -161,7 +161,7 @@ export default function Afunja() {
                     <section id='play'>
                       <AfunjaReleases />
                     </section>
-                    <EndSars />
+                    {/* <EndSars /> */}
                     <section id='videos'>
                       <YouTubeChannel />
                     </section>

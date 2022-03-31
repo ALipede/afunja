@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         "& a": {
             display: 'inline-flex',
-            width: '100%',
+            width: 'auto',
         },
         "& span": {
             flexWrap: 'wrap',
@@ -99,11 +99,11 @@ const afunjaBioProps = {
     YAdesina: {
         alt: "Yinka Adesina",
         src: BioImgFour,
-        name: "Yinka Adesina",
-        bio: "Background Vocals.",
+        name: "Yinka Adesina - Y!nx",
+        bio: "Background Vocals. Y!NX is a delicious cocktail of cultures and sounds! British African Yinka Adesina the lead vocalist and Amsterdam born and raised bassist Alex Oele bring the eclectic music style together in a stylish manner. This Afrosoulful sound reaches back to the past as well as stretches to the future to bring an authenticity and that continues to show uniqueness in its musical identity. Y!NX is about Love and the sheer magic of music! Let our music take you beyond your mindscape.",
         numKey: 4,
-        link: "https://www.youtube.com/user/YNXmusic/featured",
-        linkTag: "YNXmusic - YouTube",
+        link: "https://open.spotify.com/artist/4u5fu2cm4Dnh5WL41XlD6u?si=jaVfzXhLQrGm9GF2mZ3U_w",
+        linkTag: "Y!nx - Spotify",
     },
     JMbarani: {
         alt: "Judy Mbarani",
@@ -133,7 +133,7 @@ class AfunjaBiography extends Component {
                 onClick={this.executeOnClick}
                 expanded={false}
             >
-                Afolabi Lipede | Flame music producer, bass guitarist, singer and song writer. Mark Christopher music director and guitarist. Flame's innovative and unique style engages bass harmonics in complex chord structures with an underlying bass riff. From this style has evolved an original style of music: AFUNJA, meaning African FUNk and JAzz. Solid and mesmerising, this music evokes a feeling of a colourful world culture. You can hear this unique style on Free.<br /><br />Afunja Music Publishing Ltd <sup>Ⓟ</sup> member of ASCAP, Tunecore, Amuse, Songtrust and PPL.
+                Afolabi Lipede | Flame music producer, bass guitarist, singer and song writer. Mark Christopher music director and guitarist. Flame's innovative and unique style engages bass harmonics in complex chord structures with an underlying bass riff. From this style has evolved an original style of music: AFUNJA, meaning African FUNk and JAzz. Solid and mesmerising, this music evokes a feeling of a colourful world culture. You can hear this unique style on '<a href="https://soundcloud.com/afunja-music/free" target="_blank">FREE</a>' <em>SoundCloud</em>.<br /><br />Afunja Music Publishing Ltd <sup>Ⓟ</sup> member of ASCAP, Tunecore, Amuse, Songtrust and PPL.
             </ShowMoreText>
         );
     }

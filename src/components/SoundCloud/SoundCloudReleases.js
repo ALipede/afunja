@@ -42,7 +42,7 @@ export default function SoundCloudReleases() {
     return (
         <div className={classes.root}>
             <hr />
-            <h3>Afunja Music <FaSoundcloud /></h3>
+            <h3>Play Music <FaSoundcloud /></h3>
             {Object.keys(soundCloudProps).map(key => (
                 <div key={soundCloudProps[key].numKey}>
                     <Iframe url={soundCloudProps[key].url}
