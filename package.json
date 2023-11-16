@@ -44,7 +44,7 @@
     "@material-ui/icons": "^4.9.1",
     "bootstrap": "^4.5.2",
     "dotenv": "^8.2.0",
-    "favicons-webpack-plugin": "^4.2.0",
+    "favicons-webpack-plugin": "^6.0.1",
     "gatsby-link": "^2.4.13",
     "history": "^5.0.0",
     "mailchimp-react": "^0.0.7",
